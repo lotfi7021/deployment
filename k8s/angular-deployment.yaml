@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: angular-config
+data:
+  API_URL: "/api"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: angular
+  template:
+    metadata:
+      labels:
+        app: angular
+    spec:
+      containers:
+      - name: angular
+        image: lotfimakhlouf2/angular-app:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        env:
+        - name: API_URL
+          valueFrom:
+            configMapKeyRef:
+              name: angular-config
+              key: API_URL
+        command: ["/bin/sh", "-c"]
+        args:
+        - |
+          echo "window.APP_CONFIG = { apiUrl: '${API_URL}' };" > /usr/share/nginx/html/config.js
+          exec nginx -g 'daemon off;'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-service
+spec:
+  type: ClusterIP
+  selector:
+    app: angular
+  ports:
+  - port: 80
+    targetPort: 80

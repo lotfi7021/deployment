@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  SPRING_DATASOURCE_URL: "jdbc:mysql://mysql-service:3306/demo?useSSL=false&allowPublicKeyRetrieval=true"
+  CORS_ALLOWED_ORIGIN: "http://192.168.139.128:30090"
