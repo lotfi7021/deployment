@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" role="img" aria-label="Architecture Kubernetes">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .t  { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 600; fill: #0f172a; }
+      .s  { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #64748b; }
+      .lab{ font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #475569; }
+      .box{ fill: #ffffff; stroke-width: 2.5; }
+      .ln { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1000" height="460" rx="18" fill="#f8fafc"/>
+
+  <rect x="480" y="30" width="500" height="380" rx="16" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="7 6"/>
+  <text x="500" y="58" class="lab">Cluster Kubernetes</text>
+
+  <rect x="30" y="185" width="160" height="90" rx="12" class="box" stroke="#64748b"/>
+  <text x="110" y="226" text-anchor="middle" class="t">Navigateur</text>
+  <text x="110" y="248" text-anchor="middle" class="s">client web</text>
+
+  <rect x="260" y="170" width="180" height="120" rx="12" class="box" stroke="#7c3aed"/>
+  <text x="350" y="214" text-anchor="middle" class="t">Ingress nginx</text>
+  <text x="350" y="238" text-anchor="middle" class="s">/ → angular</text>
+  <text x="350" y="258" text-anchor="middle" class="s">/api → spring</text>
+
+  <rect x="510" y="70" width="220" height="90" rx="12" class="box" stroke="#DD0031"/>
+  <text x="620" y="106" text-anchor="middle" class="t">Service Angular :80</text>
+  <text x="620" y="130" text-anchor="middle" class="s">nginx + config.js</text>
+
+  <rect x="510" y="250" width="220" height="90" rx="12" class="box" stroke="#6DB33F"/>
+  <text x="620" y="286" text-anchor="middle" class="t">Service Spring :8081</text>
+  <text x="620" y="310" text-anchor="middle" class="s">REST /user/*</text>
+
+  <rect x="790" y="250" width="170" height="90" rx="12" class="box" stroke="#4479A1"/>
+  <text x="875" y="286" text-anchor="middle" class="t">MySQL 8 :3306</text>
+  <text x="875" y="310" text-anchor="middle" class="s">PV hostPath · PVC</text>
+
+  <line x1="190" y1="230" x2="258" y2="230" class="ln"/>
+  <path d="M 440 210 L 470 210 L 470 110 L 508 110" class="ln"/>
+  <path d="M 440 250 L 470 250 L 470 300 L 508 300" class="ln"/>
+  <line x1="730" y1="295" x2="788" y2="295" class="ln"/>
+</svg>

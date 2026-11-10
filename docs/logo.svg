@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Deployment logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="hex" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#818cf8"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <polygon points="256,72 415,164 415,348 256,440 97,348 97,164"
+           fill="none" stroke="url(#hex)" stroke-width="18" stroke-linejoin="round"/>
+  <line x1="256" y1="206" x2="256" y2="218" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
+  <line x1="256" y1="294" x2="256" y2="306" stroke="#94a3b8" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="256" cy="172" r="34" fill="#DD0031"/>
+  <circle cx="256" cy="256" r="34" fill="#6DB33F"/>
+  <circle cx="256" cy="340" r="34" fill="#4479A1"/>
+</svg>
